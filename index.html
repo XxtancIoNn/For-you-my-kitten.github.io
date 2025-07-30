@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Для самой самой любименькой и лучшей девушки в этом мире ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffe0cc);
+      color: #4d0039;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.4em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .music {
+      margin-top: 2em;
+    }
+    img {
+      margin-top: 2em;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ff99cc;
+    }
+    .heart {
+      position: fixed;
+      color: red;
+      font-size: 24px;
+      animation: float 4s linear infinite;
+      opacity: 0.7;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Я люблю тебя безумно сильно, котёночек мой [Дашенька] ❤️</h1>
+  <p>
+    Ты — моё вдохновение, моя звезда, мой смысл в этой жизни. Без тебя мир и моя душа пусты, а ты наполняешь мой мир множеством красок, делая его лучше, и заполняешь мою душу, делая меня самым счастливым человеком в мире.❤️  
+    Спасибо за твою улыбку, за тепло и свет в моей жизни.❤️ 
+    Этот сайт — маленький знак моей бесконечной любви к тебе, которая НИКОГДА не закончится, что бы ни случилось.❤️
+    Я всегда с тобой буду, что бы ни случилось. ❤️
+    Ты — мой ориентир, мой приоритет, ты — мой мир, моё всё.❤️
+    Я тебя безумно сильно люблю, моя маленькая. ❤️
+  </p>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = '100vh';
+      heart.textContent = '❤️';
+      heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 4000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
